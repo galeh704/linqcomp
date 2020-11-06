@@ -120,11 +120,12 @@ Pomo
     font-size: 20px;
 }
 
-.promo button {
+.promo a {
     color: #dc3545;
+    text-align: center;
 }
 
-.promo button:hover {
+.promo a:hover {
     background: #fafafa;
     transition: 0.3s;
 }
@@ -612,21 +613,29 @@ footer .row .col hr {
 }
 
 footer .row .col-sm-12,
-footer a {
+footer .row .col-3 a {
     color: white;
+    padding: 13px;
+}
+
+footer .row .col-3 a img {
+    padding-bottom: 10px;
 }
 
 footer a::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 2px;
+    margin: auto;
     background: rgba(238, 238, 238, 0.667);
     transition: width .3s;
     z-index: -1;
+    opacity: 0;
 }
 
-footer a:hover::after {
+footer .row .col-3 a:hover::after {
     width: 75%;
     transition: width .3s;
+    opacity: 1;
 }

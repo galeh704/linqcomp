@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Login-->
+    <meta name="google-signin-client_id" content="815877702996-e1fnfkolq3ane3p9gngrfle4jmn1v2mh.apps.googleusercontent.com">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,200;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!--Tittle-->
+    <title>LINQ Computer</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+    <header>
+        <!--Form Login-->
+        <div class="login-modal">
+            <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold justify-content-center">Masuk</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                        </div>
+                        <div class="modal-body mx-3">
+                            <!--Intro-->
+                            <div class="form-inline justify-content-center text-center mb-4">
+                                Dapatkan promo seperti harga spesial ataupun diskon langsung dari kami
+                            </div>
+                            <div class="md-form mb-3 mt-2">
+                                <!--Email-->
+                                <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+                                <input type="email" id="defaultForm-email" class="form-control validate">
+                            </div>
+
+                            <div class="md-form mb-3">
+                                <!--Password-->
+                                <label data-error="wrong" data-success="right" for="defaultForm-pass">Password</label>
+                                <input type="password" id="defaultForm-pass" class="form-control validate">
+                            </div>
+                            <div class="form-inline justify-content-center mt-3 mb-3">
+                                <!--button untuk log out
+                                <a href="" class="btn btn-danger">Keluar</a>-->
+                                <a href="" class="btn btn-danger">Masuk</a>
+                            </div>
+                            <hr>
+                            <div class="form-inline justify-content-center mb-3">
+                                atau
+                            </div>
+
+                            <div class="form-inline justify-content-center">
+                                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <!--Navigasi 1-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container justify-content-center">
+                    <div class="row w-100 align-items-center">
+                        <div class="col-md-6">
+                            <ul class="navbar-nav ml-auto justify-content-start">
+                                <li class="nav-item">
+                                    <div class="form-inline justify-content-center">
+                                        <a class="navbar-brand" href="index.html">
+                                            <!--Logo-->
+                                            <img src="images/Logo.png" width="150" class="" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="navbar-nav ml-auto justify-content-end">
+                                <li class="nav-item">
+                                    <!--Tombol Login-->
+                                    <div class="form-inline justify-content-center">
+                                        <!--<a href="">Nama Akun</a>-->
+                                        <button type="button" class="btn btn-outline-danger btn-sm my-2 my-sm-0" data-toggle="modal" data-target="#modalLoginForm">Masuk</button>
+                                        <!--button untuk log out
+                                        <a href="" class="btn btn-danger">Keluar</a>-->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!--Navigasi 2-->
+            <div class="nav-contact bg-danger p-2">
+                <div class="container">
+                    <div class="row text-center align-items-center">
+                        <div class="company-name col-md-3">
+                            <a class="" href="index.html">LINQ Computer</a>
+                        </div>
+                        <div class="contact col">
+                            <!--Instagram-->
+                            <a target="_blank" class="" href="https://www.instagram.com/linqcomp"><img class="icon " src="images/icons/instagram.png" width="25" class="" alt=""> linqcomp</a>
+                        </div>
+                        <div class="contact col">
+                            <!--Whatsapp-->
+                            <a target="_blank" class="" href="https://wa.me/6285271115995"><img class="icon" src="images/icons/whatsapp.png" width="25" class="" alt=""> 085271115995</a>
+                        </div>
+                        <div class="search col-md-3">
+                            <!--Pencarian-->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Pencarian">
+                                <span class="input-group-append">
+                                <button class="btn btn-outline-light" type="button"><i class="fas fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 my-4">
+                    <div class="post">
+                        <div class="card">
+                            <div class="card-img">
+                                <!--Foto Konten-->
+                                <img src="images/dummy4.jpg" class="card-img-top img-fluid" alt="...">
+                            </div>
+                            <div class="post-body">
+                                <div class="container">
+                                    <!--Judul Konten/Artikel-->
+                                    <h5 class="card-title px-3 my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h5>
+                                    <div class="card-detail text-secondary px-3 mb-3">
+                                        <!--tanggal konten-->
+                                        <span class="date "><i class="fas fa-calendar-alt "></i> 2 November 2020</span>
+                                        <span class="insight"><i class="fas fa-eye text-secondary "> 24</i>
+                                            <!--Like
+                                            <i class="fas fa-heart text-secondary "> 1000</i>-->
+                                            <i class="fas fa-comment-alt text-secondary "> 6</i></span>
+                                    </div>
+                                    <div class="p-content px-3">
+                                        <!--Isi Konten-->
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in convallis quam. Aenean vestibulum pharetra lacus quis facilisis. Vivamus vel elementum leo, quis interdum enim. Cras non dignissim elit, eu sodales
+                                            tellus. Cras justo neque, dapibus id risus pretium, pretium porttitor elit. Proin dictum, leo in condimentum tempus, quam massa pulvinar leo, id lobortis libero velit nec dui. Nam est dolor, fermentum vitae
+                                            neque nec, aliquam commodo tortor. Vestibulum interdum nisl mauris, nec tincidunt nunc lobortis non. Nam in gravida quam. Fusce non luctus est, non sagittis ipsum. Sed condimentum quis nibh eget molestie.</p>
+                                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer semper orci in eros elementum bibendum et vitae turpis. Duis pulvinar eros non dui finibus, eu mattis dolor pharetra.
+                                            Suspendisse nec lectus sit amet nisl aliquam porta. Maecenas at purus nulla. Integer efficitur vel nunc id egestas. Ut sit amet metus cursus, mattis dui sed, faucibus tellus. Morbi sit amet viverra enim. In
+                                            posuere odio velit, vitae eleifend quam interdum iaculis. Sed porttitor tempus leo, at condimentum arcu ornare vel. Nulla libero augue, elementum faucibus porta in, vestibulum in est. Nulla facilisis augue condimentum
+                                            sagittis auctor.</p>
+                                        <p>In commodo fringilla eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sodales, enim vitae tristique tempor, tellus metus volutpat erat, eget fermentum ligula
+                                            magna dictum velit. Vestibulum lobortis ligula quis sem pharetra, non sollicitudin sem sollicitudin. Vestibulum dictum consectetur placerat. Integer lacus felis, rhoncus et nunc eu, dictum varius est. Donec
+                                            iaculis sollicitudin justo, id tempor lacus pulvinar vel.</p>
+                                        <p>Praesent finibus efficitur leo ac convallis. Vestibulum et justo facilisis, finibus lorem at, placerat neque. Pellentesque et vehicula erat, quis pretium purus. Proin tempus sapien nisi, et finibus ex dignissim
+                                            ut. Vivamus nec quam nec leo varius varius ut quis leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque blandit mi vel ultricies vestibulum. Curabitur eget enim interdum lacus fringilla
+                                            feugiat. Sed malesuada ac neque et tempus.</p>
+                                    </div>
+                                    <hr>
+                                    <div class="post-footer row my-3 mx-2">
+                                        <div class="col-4">
+                                            <!--Kategori Konten-->
+                                            <div class="category">
+                                                <a href="" class="text-secondary"><i class="fas fa-folder"></i> Category</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                        </div>
+                                        <div class="col-4 ">
+                                            <!--Link share-->
+                                            <div class="share text-secondary">
+                                                Bagikan ke
+                                                <!--Untuk bikin link jika sudah ada urlnya kunjungi website
+                                                https://www.websiteplanet.com/webtools/sharelink/-->
+                                                <a href="https://www.facebook.com/sharer.php?..." target="blank" rel="noopener noreferrer"><i class="fab fa-facebook-f text-secondary"></i></a>
+                                                <a href="https://twitter.com/intent/tweet?..." target="blank" rel="noopener noreferrer"><i class="fab fa-twitter text-secondary"></i></a>
+                                                <a href="https://www.linkedin.com/shareArticle?..." target="blank" rel="noopener noreferrer"><i class="fab fa-linkedin text-secondary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <div class="row my-3 ">
+                            <!--Produk 1-->
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="product-img ">
+                                        <!--Foto Produk 1-->
+                                        <img src="images/dummy1.jpg " alt=" ">
+                                    </div>
+                                    <!--Nama Produk 1-->
+                                    <div class="product-name ">AMD Ryzen</div>
+                                    <div class="price ">
+                                        <!--Harga Normal Produk 1-->
+                                        <div class="normal ">Rp.450.000</div>
+                                        <!--Harga Diskon Produk 1-->
+                                        <div class="discount ">Rp.400.000</div>
+                                    </div>
+                                    <div class="buy ">
+                                        <!--Kontak ke WA-->
+                                        <a href="https://wa.me/6285271115995 " class="px-2 ">Chat ke WA</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Produk 2-->
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="product-img ">
+                                        <!--Foto Produk 2-->
+                                        <img src="images/dummy5.jpg " alt=" ">
+                                    </div>
+                                    <!--Nama Produk 2-->
+                                    <div class="product-name ">Motherboard</div>
+                                    <div class="price ">
+                                        <!--Harga Normal Produk 2-->
+                                        <div class="normal ">Rp.350.000</div>
+                                        <!--Harga Diskon Produk 2-->
+                                        <div class="discount ">Rp.299.000</div>
+                                    </div>
+                                    <div class="buy ">
+                                        <!--Kontak ke WA-->
+                                        <a href="https://wa.me/6285271115995 " class="px-2 ">Chat ke WA</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Produk 3-->
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="product-img ">
+                                        <!--Foto Produk 3-->
+                                        <img src="images/dummy6.jpg " alt=" ">
+                                    </div>
+                                    <!--Nama Produk 3-->
+                                    <div class="product-name ">RAM 4GB DDR4</div>
+                                    <div class="price ">
+                                        <!--Harga Normal Produk 3-->
+                                        <div class="normal ">Rp.300.000</div>
+                                        <!--Harga Diskon Produk 3-->
+                                        <div class="discount ">Rp.229.000</div>
+                                    </div>
+                                    <div class="buy ">
+                                        <!--Kontak ke WA-->
+                                        <a href="https://wa.me/6285271115995 " class="px-2 ">Chat ke WA</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Comment Section-->
+                    <section class="comment mx-3 ">
+                        <div class="input-comment ">
+                            <h4>Tinggalkan Komentar</h4>
+                            <!--Input Komentr-->
+                            <textarea class="form-control mb-2" id="exampleFormControlTextarea1" rows="3" placeholder="Tambahkan Komentar"></textarea>
+                            <div class="comment-button ">
+                                <!--Button Buat Komentar
+                                <button type="submit " class="btn btn-danger mt-3">Komentar</button>-->
+                            </div>
+                            <!--Alert harus login dulu-->
+                            <p class="must-login r">Anda harus masuk sebelum memberi komentar!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                        </div>
+                        <div class="number-comment mb-3">
+                            <!--Jumlah Komentar-->
+                            <h4>6 Komentar</h4>
+                        </div>
+                        <hr>
+                        <ul class="comment-list my-4 ">
+                            <!--Komentar 1-->
+                            <li class="comment-card ">
+                                <div class="comment-body ">
+                                    <!--Nama-->
+                                    <h3>Tina Rose</h3>
+                                    <!--Tanggal Komentar-->
+                                    <div class="meta ">4 November 2020 jam: 09:00pm</div>
+                                    <!--Isi Komentar-->
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
+                                        nihil?
+                                    </p>
+                                    <!--Like & Reply-->
+                                    <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
+                                        <span><i class="fas fa-reply reply"> Reply</i>
+                                            <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
+                                            <button class="btn btn-primary reply-btn" type="submit">Balas</button>
+                                            <button class="btn cancel">Batal</button>
+                                            <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                                    </span>
+                                    <!--Alert harus login dulu-->
+                                    </p>
+                                </div>
+                            </li>
+                            <!--Komentar 2-->
+                            <li class="comment-card ">
+
+                                <div class="comment-body ">
+                                    <!--Nama-->
+                                    <h3>John Doe</h3>
+                                    <!--Tanggal Komentar-->
+                                    <div class="meta ">2 November 2020 jam: 10:00pm</div>
+                                    <!--Isi Komentar-->
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
+                                        nihil?
+                                    </p>
+                                    <!--Like & Reply-->
+                                    <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
+                                        <span><i class="fas fa-reply reply"> Reply</i>
+                                            <!--Input dan Button untuk reply
+                                            <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
+                                            <button class="btn btn-primary reply-btn" type="submit">Balas</button>
+                                            <button class="btn cancel">Batal</button>-->
+                                        </span>
+                                        <!--Alert harus login dulu-->
+                                        <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                                    </p>
+                                </div>
+                                <!--Reply Komentar 2-->
+                                <ul class="children">
+                                    <li class="comment-card">
+
+                                        <div class="comment-body">
+                                            <!--Nama-->
+                                            <h3>Tina Rose</h3>
+                                            <!--Tanggal Komentar-->
+                                            <div class="meta">3 November 2020 jam: 09:00am</div>
+                                            <!--Isi Komentar-->
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
+                                                nihil?
+                                            </p>
+                                            <!--Like & Reply-->
+                                            <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
+                                                <span><i class="fas fa-reply reply"> Reply</i>
+                                                    <!--Input dan Button untuk reply
+                                                    <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
+                                                    <button class="btn btn-primary reply-btn" type="submit">Balas</button>
+                                                    <button class="btn cancel">Batal</button>-->
+                                                </span>
+                                                <!--Alert harus login dulu-->
+                                                <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--Komentar 3-->
+                            <li class="comment-card ">
+                                <div class="comment-body ">
+                                    <!--Nama-->
+                                    <h3>Tina Rose</h3>
+                                    <!--Tanggal Komentar-->
+                                    <div class="meta ">2 November 2020 jam: 07:00pm</div>
+                                    <!--Isi Komentar-->
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
+                                        nihil?
+                                    </p>
+                                    <!--Like & Reply-->
+                                    <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
+                                        <span><i class="fas fa-reply reply"> Reply</i>
+                                            <!--Input dan Button untuk reply
+                                            <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
+                                            <button class="btn btn-primary reply-btn" type="submit">Balas</button>
+                                            <button class="btn cancel">Batal</button>-->
+                                        </span>
+                                        <!--Alert harus login dulu-->
+                                        <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                                    </p>
+                                </div>
+                                <!--Reply Komentar 3-->
+                                <ul class="children">
+                                    <li class="comment-card">
+                                        <div class="comment-body">
+                                            <!--Nama-->
+                                            <h3>John Doe</h3>
+                                            <!--Tanggal Komentar-->
+                                            <div class="meta">3 November 2020 jam: 12:00pm</div>
+                                            <!--Isi Komentar-->
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
+                                                nihil?
+                                            </p>
+                                            <!--Like & Reply-->
+                                            <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
+                                                <span><i class="fas fa-reply reply"> Reply</i>
+                                                    <!--Input dan Button untuk reply
+                                                    <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
+                                                    <button class="btn btn-primary reply-btn" type="submit">Balas</button>
+                                                    <button class="btn cancel">Batal</button>-->
+                                                </span>
+                                                <!--Alert harus login dulu-->
+                                                <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <!--Reply2 Komentar 3-->
+                                    <ul class="children">
+                                        <li class="comment-card">
+                                            <div class="comment-body">
+                                                <!--Nama-->
+                                                <h3>Tina Rose</h3>
+                                                <!--Tanggal Komentar-->
+                                                <div class="meta">4 November 2020 jam: 13:00pm</div>
+                                                <!--Isi Komentar-->
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit
+                                                    necessitatibus, nihil?
+                                                </p>
+                                                <!--Like & Reply-->
+                                                <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
+                                                    <span><i class="fas fa-reply reply"> Reply</i>
+                                                        <!--Input dan Button untuk reply
+                                                        <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
+                                                        <button class="btn btn-primary reply-btn" type="submit">Balas</button>
+                                                        <button class="btn cancel">Batal</button>-->
+                                                    </span>
+                                                    <!--Alert harus login dulu-->
+                                                    <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <!--Promo-->
+                    <div class="promo my-4">
+                        <div class="card">
+                            <!--Judul Promo-->
+                            <h5 class="card-header text-center bg-danger text-white">Promo Berlangsung</h5>
+                            <div class="card-body justify-content-center text-center">
+                                <!--Isi Promo-->
+                                <p>Instal ulang Windows 7/8/10 potongan harga Rp.10.000</p>
+                            </div>
+                            <!--Tombol Promo-->
+                            <button class=" card-btn font-weight-bold p-4 " data-toggle="modal" data-target="#modalLoginForm">Ambil Voucher</button>
+                        </div>
+                    </div>
+                    <!--Artikel Populer-->
+                    <div class="popular my-4">
+                        <div class="card">
+                            <h5 class="card-header text-center bg-danger text-white">Artikel Populer</h5>
+                            <div class="card-body">
+                                <div class="row">
+                                    <!--Gambar Artikel-->
+                                    <div class="card-img col-sm-4">
+                                        <img src="images/dummy1.jpg" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <!--Link Artiker-->
+                                        <a href="content.html">
+                                            <!--Judul-->
+                                            <div class="title text-black ">
+                                                Lorem ipsum dolor sit amet.
+                                            </div>
+                                        </a>
+                                        <!--Tanggal Artikel-->
+                                        <div class="date">
+                                            1 November 2020
+                                        </div>
+                                        <!--Jumlah Pengunjung-->
+                                        <div class="insight text-md-left">
+                                            <i class="fas fa-eye ml-3"> 60</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <!--Gambar Artikel-->
+                                    <div class="card-img col-sm-4">
+                                        <img src="images/dummy2.jpg" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <!--Link Artiker-->
+                                        <a href="content.html">
+                                            <!--Judul-->
+                                            <div class="title text-black ">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            </div>
+                                        </a>
+                                        <!--Tanggal Artikel-->
+                                        <div class="date">
+                                            1 November 2020
+                                        </div>
+                                        <!--Jumlah Pengunjung-->
+                                        <div class="insight text-md-left">
+                                            <i class="fas fa-eye ml-3"> 60</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <!--Gambar Artikel-->
+                                    <div class="card-img col-sm-4">
+                                        <img src="images/dummy3.jpg" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <!--Link Artiker-->
+                                        <a href="content.html">
+                                            <!--Judul-->
+                                            <div class="title text-black ">
+                                                Lorem ipsum dolor sit amet, consectetur.
+                                            </div>
+                                        </a>
+                                        <!--Tanggal Artikel-->
+                                        <div class="date">
+                                            1 November 2020
+                                        </div>
+                                        <!--Jumlah Pengunjung-->
+                                        <div class="insight text-md-left">
+                                            <i class="fas fa-eye ml-3"> 60</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <!--Gambar Artikel-->
+                                    <div class="card-img col-sm-4">
+                                        <img src="images/dummy4.jpg" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <!--Link Artiker-->
+                                        <a href="content.html">
+                                            <!--Judul-->
+                                            <div class="title text-black ">
+                                                Lorem ipsum dolor sit consectetur.
+                                            </div>
+                                        </a>
+                                        <!--Tanggal Artikel-->
+                                        <div class="date">
+                                            1 November 2020
+                                        </div>
+                                        <!--Jumlah Pengunjung-->
+                                        <div class="insight text-md-left">
+                                            <i class="fas fa-eye ml-3"> 60</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <!--Gambar Artikel-->
+                                    <div class="card-img col-sm-4">
+                                        <img src="images/dummy5.jpg" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <!--Link Artiker-->
+                                        <a href="content.html">
+                                            <!--Judul-->
+                                            <div class="title text-black ">
+                                                Lorem ipsum dolor sit.
+                                            </div>
+                                        </a>
+                                        <!--Tanggal Artikel-->
+                                        <div class="date">
+                                            1 November 2020
+                                        </div>
+                                        <!--Jumlah Pengunjung-->
+                                        <div class="insight text-md-left">
+                                            <i class="fas fa-eye ml-3"> 60</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Kategori-->
+                    <div class="category my-4">
+                        <div class="card">
+                            <h5 class="card-header text-center bg-danger text-white">Kategori</h5>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <!--Jumlah Konten-->
+                                    <li><a href="">Umum </a><span>(2)</span></li>
+                                    <li><a href="">Kegiatan </a><span>(3)</span></li>
+                                    <li><a href="">Produk </a><span>(4)</span></li>
+                                    <li><a href="">Berita </a><span>(1)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Footer-->
+        <footer class="page-footer bg-dark ">
+            <div class="container text-center text-md-left ">
+                <div class="row ">
+                    <div class="col-sm-12 col-md-4 mt-3 mb-4 ">
+                        <!--googlemap-->
+                        <h5>Lokasi</h5>
+                        <hr class="bg-danger mt-0 mb-4 ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.60488306746!2d101.477639!3d0.524385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9ea4344dbb2bb16!2sLINQ%20Computer!5e0!3m2!1sen!2sid!4v1603864703115!5m2!1sen!2sid
+                                " width="100% " height="250 " frameborder="0 " style="border:0; " allowfullscreen=" " aria-hidden="false " tabindex="0 "></iframe>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mt-3 mx-auto mb-4 ">
+                        <div class="container text-center text-md-left ">
+                            <!--Kontak-->
+                            <h5>Kontak Kami</h5>
+                            <hr class="bg-danger mt-0 mb-4 ">
+                            <ul class="list-unstyled ">
+                                <li class="my-2 ">Jl. Hangtuah Ujung No.19, Rejosari, Kec. Tenayan Raya, Kota Pekanbaru, Riau</li>
+                                <li class="my-2 ">
+                                    Facebook : linqcomp
+                                </li>
+                                <li class="my-2 ">
+                                    Whatsapp : 085271115995
+                                </li>
+                                <li class="my-2 ">
+                                    Email : linqcomp@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Link Sosmed-->
+                    <div class="col-sm-12 col-md-4 mt-3 mx-auto mb-4 ">
+                        <div class="container text-center ">
+                            <h5>Sosial Media</h5>
+                            <hr class="bg-danger mt-0 mb-4 ">
+                            <div class="row justify-content-center ">
+                                <div class="col-3 ">
+                                    <a href="https://web.facebook.com/linqcomp-102549084474756/ " target="_blank">
+                                        <img class="mr-3 " src="images/icons/facebook.png " width="30 " alt=" ">
+                                    </a>
+                                </div>
+                                <div class="col-3 ">
+                                    <a href="https://www.instagram.com/linqcomp/ " target="_blank">
+                                        <img class="mr-3 " src="images/icons/instagram.png " width="30 " alt=" ">
+                                    </a>
+                                </div>
+                                <div class="col-3 ">
+                                    <a href="https://wa.me/6285271115995 " target="_blank">
+                                        <img class="mr-3 " src="images/icons/whatsapp.png " width="30 " class=" " alt=" ">
+                                    </a>
+                                </div>
+                                <div class="col-3 ">
+                                    <a href="mailto:linqcomp@gmail.com " target="_blank">
+                                        <img class="mr-3 " src="images/icons/gmail.png " width="30 " alt=" ">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+
+        <!-- ALL JS FILES -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/jquery-3.5.1.slim.min.js "></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js "></script>
+        <script src="js/main.js"></script>
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton " async defer></script>
+        <script>
+        </script>
+</body>
+
+</html>

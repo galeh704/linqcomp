@@ -13,8 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Icon -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <!--Tittle-->
@@ -76,7 +78,7 @@
             <!--Navigasi 1-->
             <nav class="navbar navbar-expand-lg">
                 <div class="container justify-content-center">
-                    <div class="row w-100 align-items-center">
+                    <div class="row w-100 align-items-center animate__animated animate__fadeInDown animate__slow 2s">
                         <div class="col-6">
                             <ul class="navbar-nav ml-auto justify-content-start">
                                 <li class="nav-item">
@@ -108,18 +110,18 @@
             <div class="nav-contact bg-danger p-2">
                 <div class="container">
                     <div class="row text-center align-items-center">
-                        <div class="company-name col-md-3">
+                        <div class="company-name col-md-3 animate__animated animate__fadeInUp animate__delay-1s">
                             <a class="" href="index.html">LINQ Computer</a>
                         </div>
-                        <div class="contact col">
+                        <div class="contact col animate__animated animate__fadeInUp animate__delay-2s">
                             <!--Instagram-->
-                            <a target="_blank" class="" href="https://www.instagram.com/linqcomp"><img class="icon " src="images/icons/instagram.png" width="25" class="" alt=""> linqcomp</a>
+                            <a class="" target="_blank" href="https://www.instagram.com/linqcomp"><img class="icon " src="images/icons/instagram.png" width="25" class="" alt=""> linqcomp</a>
                         </div>
-                        <div class="contact col">
+                        <div class="contact col animate__animated animate__fadeInUp animate__delay-2s">
                             <!--Whatsapp-->
-                            <a target="_blank" class="" href="https://wa.me/6285271115995"><img class="icon" src="images/icons/whatsapp.png" width="25" class="" alt=""> 085271115995</a>
+                            <a class="" target="_blank" href="https://wa.me/6285271115995"><img class="icon" src="images/icons/whatsapp.png" width="25" class="" alt=""> 085271115995</a>
                         </div>
-                        <div class="search col-md-3">
+                        <div class="search col-md-3 animate__animated animate__fadeInUp animate__delay-3s">
                             <!--Pencarian-->
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Pencarian">
@@ -133,7 +135,9 @@
             </div>
         </header>
 
+        <a href="#top" class="back-to-top" data-100-top="opacity:0;" data-0-top="opacity:1;"><i class="fas fa-angle-up"></i></a>
         <div class="container">
+
             <div class="row">
                 <div class="col-md-8 my-4">
                     <div class="post">
@@ -419,32 +423,32 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <!--Reply2 Komentar 3-->
-                                    <ul class="children">
-                                        <li class="comment-card">
-                                            <div class="comment-body">
-                                                <!--Nama-->
-                                                <h3>Tina Rose</h3>
-                                                <!--Tanggal Komentar-->
-                                                <div class="meta">4 November 2020 jam: 13:00pm</div>
-                                                <!--Isi Komentar-->
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit
-                                                    necessitatibus, nihil?
-                                                </p>
-                                                <!--Like & Reply-->
-                                                <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
-                                                    <span><i class="fas fa-reply reply"> Reply</i>
-                                                        <!--Input dan Button untuk reply
-                                                        <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
-                                                        <button class="btn btn-primary reply-btn" type="submit">Balas</button>
-                                                        <button class="btn cancel">Batal</button>-->
-                                                    </span>
-                                                    <!--Alert harus login dulu-->
-                                                    <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
-                                                </p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                </ul>
+                                <!--Reply Komentar 3-->
+                                <ul class="children">
+                                    <li class="comment-card">
+                                        <div class="comment-body">
+                                            <!--Nama-->
+                                            <h3>Tina Rose</h3>
+                                            <!--Tanggal Komentar-->
+                                            <div class="meta">4 November 2020 jam: 13:00pm</div>
+                                            <!--Isi Komentar-->
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
+                                                nihil?
+                                            </p>
+                                            <!--Like & Reply-->
+                                            <p><span class="like"><i class="fas fa-heart" id="like"> 7</i></span>
+                                                <span><i class="fas fa-reply reply"> Reply</i>
+                                                    <!--Input dan Button untuk reply
+                                                    <input type="text" class="form-control reply-input" placeholder="Tambahkan balasan" name="" id="">
+                                                    <button class="btn btn-primary reply-btn" type="submit">Balas</button>
+                                                    <button class="btn cancel">Batal</button>-->
+                                                </span>
+                                                <!--Alert harus login dulu-->
+                                                <p class="must-login need-login">Anda harus masuk sebelum memberi balasan!! <span><a href="" data-toggle="modal" data-target="#modalLoginForm" a>Masuk</a></span></p>
+                                            </p>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -661,7 +665,6 @@
             </div>
         </footer>
 
-        <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
 
         <!-- ALL JS FILES -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -670,7 +673,9 @@
         <script src="js/bootstrap.min.js "></script>
         <script src="js/main.js"></script>
         <script src="https://apis.google.com/js/platform.js?onload=renderButton " async defer></script>
-        <script>
+        <script src="js/skrollr.js"></script>
+        <script type="text/javascript">
+            var s = skrollr.init();
         </script>
 </body>
 

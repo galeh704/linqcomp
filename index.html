@@ -13,8 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Icon -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <!--Tittle-->
@@ -72,7 +74,7 @@
         <!--Navigasi 1-->
         <nav class="navbar navbar-expand-lg">
             <div class="container justify-content-center">
-                <div class="row w-100 align-items-center">
+                <div class="row w-100 align-items-center animate__animated animate__fadeInDown animate__slow 2s">
                     <div class="col-6">
                         <ul class="navbar-nav ml-auto justify-content-start">
                             <li class="nav-item">
@@ -104,18 +106,18 @@
         <div class="nav-contact bg-danger p-2">
             <div class="container">
                 <div class="row text-center align-items-center">
-                    <div class="company-name col-md-3">
+                    <div class="company-name col-md-3 animate__animated animate__fadeInUp animate__delay-1s">
                         <a class="" href="index.html">LINQ Computer</a>
                     </div>
-                    <div class="contact col">
+                    <div class="contact col animate__animated animate__fadeInUp animate__delay-2s">
                         <!--Instagram-->
                         <a class="" target="_blank" href="https://www.instagram.com/linqcomp"><img class="icon " src="images/icons/instagram.png" width="25" class="" alt=""> linqcomp</a>
                     </div>
-                    <div class="contact col">
+                    <div class="contact col animate__animated animate__fadeInUp animate__delay-2s">
                         <!--Whatsapp-->
                         <a class="" target="_blank" href="https://wa.me/6285271115995"><img class="icon" src="images/icons/whatsapp.png" width="25" class="" alt=""> 085271115995</a>
                     </div>
-                    <div class="search col-md-3">
+                    <div class="search col-md-3 animate__animated animate__fadeInUp animate__delay-3s">
                         <!--Pencarian-->
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Pencarian">
@@ -129,39 +131,41 @@
         </div>
     </header>
 
+    <a href="#top" class="back-to-top" data-100-top="opacity:0;" data-0-top="opacity:1;"><i class="fas fa-angle-up"></i></a>
+
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <!--Hero / Carousel-->
-                <div id="carouselExampleCaptions" class="carousel slide my-4 carousel-fade" data-ride="carousel">
+                <div id="carouselExampleCaptions" class="carousel slide my-4 carousel-fade" data-ride="carousel" data-pause="false">
                     <ol class="carousel-indicators" id="#hero-carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div class="carousel-inner animate__animated animate__fadeInLeft animate__slow 2s">
+                        <div class="carousel-item active" data-interval="5000">
                             <!--Gambar Hero-->
                             <img src="images/dummy4.jpg" class="d-block w-100" alt="...">
                             <!--Kaption Hero-->
-                            <div class="carousel-caption">
-                                <h5>Selamat Datang di LINQ Computer</h5>
+                            <div class="carousel-caption animate__animated animate__slideInDown">
+                                <h5 class="animate__animated animate__fadeOutRight animate__delay-4s">Selamat Datang di LINQ Computer</h5>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-interval="5000">
                             <!--Gambar Hero-->
                             <img src="images/dummy5.jpg" class="d-block w-100 align-middle" alt="...">
                             <!--Kaption Hero-->
-                            <div class="carousel-caption">
-                                <h5>service laptop, Printer, & aksesoris</h5>
+                            <div class="carousel-caption animate__animated animate__slideInLeft">
+                                <h5 class="animate__animated animate__fadeOutUp animate__delay-4s">service laptop, Printer, & aksesoris</h5>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-interval="5000">
                             <!--Gambar Hero-->
                             <img src="images/dummy6.jpg" class="d-block w-100" alt="...">
                             <!--Kaption Hero-->
-                            <div class="carousel-caption">
-                                <h5>Spare parts & Perakitan PC</h5>
+                            <div class="carousel-caption animate__animated animate__slideInUp">
+                                <h5 class="animate__animated animate__fadeOutDown animate__delay-4s">Spare parts & Perakitan PC</h5>
                             </div>
                         </div>
                     </div>
@@ -320,7 +324,7 @@
             </div>
             <div class="col-md-4">
                 <!--Promo-->
-                <div class="promo my-4">
+                <div class="promo my-4 animate__animated animate__fadeInRight animate__slow 2s">
                     <div class="card">
                         <!--Judul Promo-->
                         <h5 class="card-header text-center bg-danger text-white">Promo Berlangsung</h5>
@@ -329,7 +333,7 @@
                             <p>Instal ulang Windows 7/8/10 potongan harga Rp.10.000</p>
                         </div>
                         <!--Tombol Promo-->
-                        <a href="" class=" card-btn font-weight-bold p-4" data-toggle="modal" data-target="#modalLoginForm">Ambil Voucher</a>
+                        <a href="" class=" card-btn font-weight-bold p-4 animate__animated animate__heartBeat" data-toggle="modal" data-target="#modalLoginForm">Ambil Voucher</a>
                     </div>
                 </div>
                 <!--Artikel Populer-->
@@ -542,7 +546,6 @@
         </div>
     </footer>
 
-    <a href="#top" class="back-to-top"><i class="fas fa-angle-up"></i></a>
 
     <!-- ALL JS FILES -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -551,7 +554,10 @@
     <script src="js/bootstrap.min.js "></script>
     <script src="js/main.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-
+    <script src="js/skrollr.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
 </body>
 
 </html>
